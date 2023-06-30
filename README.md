@@ -14,6 +14,9 @@ python bot.py
 扫码登陆成功后，wechaty机器人就算启动成功了，可以通过微信向机器人发送消息`ding`来测试。默认开启DingDong插件，机器人会自动回复`dong`。
 至此，恭喜你，你的第一个微信机器人成功运行了！接下来可以将各种需求和业务逻辑以插件的形式加入到机器人中。
 
+### 如遇ImportError: cannot import name 'update' from 'turtle'
+请将wechaty_puppet_itchat下的login.py文件内的 from turtle import update 修改为import turtle即可正常运行
+
 ## 编写插件
 
 目前有很多开发者将所有的业务逻辑都写在一个文件的一个函数（`on_message`）里面，时间长了，业务多了，就导致这里的代码很难管理，故需要从代码文件层面就将业务隔离开，此时我们推荐使用[插件系统](https://wechaty.readthedocs.io/zh_CN/latest/plugins/introduction/)来编写对应业务。
