@@ -5,3 +5,4 @@ python-dotenv
 docker
 apscheduler
 dataclasses-json
+turtle==0.0.1
