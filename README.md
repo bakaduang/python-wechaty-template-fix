@@ -4,21 +4,10 @@ Python Wechaty Project Template which contains the best practise.
 
 ## Getting Started
 
-### 申请Token
-
-如要运行微信机器人，需要申请Token来启动服务，在此推荐申请[Padlocal Token](http://pad-local.com/#/)来快速启动该服务。
-
-### 启动Gateway Docker 服务
-运行本项目下的`start_gateway_docker.sh`脚本，并将申请到的Padlocal Token作为脚本参数传入
-
-```shell
-./start_gateway_docker.sh <your_token>
-```
-
 ### 运行机器人
 
 ```shell
-make bot
+python bot.py
 ```
 
 初次登陆时，可能需要多次扫码才会登陆成功。
@@ -63,6 +52,10 @@ class DingDongPlugin(WechatyPlugin):
 * 在想阻止消息传递的地方添加一行代码：`message_controller.disable_all_plugins(msg)`，此时需要注意需要将msg对象传递进去。
 
 ## History
+### v0.0.3 (20230630)
+修整部分无用代码
+协议更换为itchat
+
 
 ### v0.0.2 (Aug 2022)
 
